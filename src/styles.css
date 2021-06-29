@@ -1,3 +1,28 @@
-#content header {
-    font-weight: bold;
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+.background {
+  background-image: url("./trattoria.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+header {
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  color: white;
+}
+header h1 {
+  margin: 0;
+  background-color: rgb(16, 18, 19);
+  padding: 0.5rem 0;
 }
