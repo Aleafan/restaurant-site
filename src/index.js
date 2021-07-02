@@ -2,9 +2,9 @@ import { loadHomepage } from './homepage.js';
 import { loadHeader } from './header.js';
 import { loadFooter } from './footer.js';
 
-loadHeader();
-loadHomepage();
-loadFooter();
+// loadHeader();
+// loadHomepage();
+// loadFooter();
 
 // Correct 100vh rendering on mobiles
 const vh = window.innerHeight * 0.01;
