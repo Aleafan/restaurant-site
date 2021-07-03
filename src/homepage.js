@@ -1,4 +1,4 @@
-export const loadHomepage = () => {
+export const createHomepage = () => {
   const main = document.createElement('main');
   
   const image = document.createElement('div');
@@ -36,6 +36,5 @@ export const loadHomepage = () => {
 
   main.appendChild(vhWrapper);
   
-  const content = document.getElementById('content');
-  content.appendChild(main);
+  return main;
 }

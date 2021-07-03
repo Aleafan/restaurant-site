@@ -1,4 +1,4 @@
-export const loadHeader = () => {
+export const createHeader = () => {
   const header = document.createElement('header');
 
   const wrapper = document.createElement('div');
@@ -28,18 +28,18 @@ export const loadHeader = () => {
   const ul = document.createElement('ul');
   nav.appendChild(ul);
 
-  const links = ['HOME', 'MENU', 'CONTACT'];
+  const links = ['home', 'menu', 'contact'];
   links.forEach(link => {
     const li = document.createElement('li');
     const a = document.createElement('a');
     a.setAttribute('href', '#');
-    a.textContent = link;
+    a.setAttribute('id', link);
+    a.textContent = link.toUpperCase();
     li.appendChild(a);
     ul.appendChild(li);
   });
 
-  const content = document.getElementById('content');
-  content.appendChild(header);
+  return header;
 }
 
 let navMenuShow = false;

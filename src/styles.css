@@ -41,7 +41,6 @@ header {
 }
 header h1 {
   font-family: var(--title-font);
-  font-family: 'Otomanopee One', sans-serif;
   font-style: italic;
   margin: 0;  
 }
@@ -75,15 +74,14 @@ nav > ul {
   padding: 0;
   list-style-type: none;
 }
-nav > ul > li {
-  padding: 0.7rem 1rem;
-  cursor: pointer;
-}
 li > a {
+  display: block;
   background-color: transparent;
   text-decoration: none;
   font-style: normal;
   color: white;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
 }
 .show-nav {
   transform: translateY(0);
@@ -99,7 +97,7 @@ li > a {
   justify-content: center;
 }
 #vh-wrapper > h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 figure {
@@ -115,6 +113,7 @@ figcaption {
 footer {
   padding: 1rem 3px;
   background-color:rgb(24, 26, 28);
+  font-style: italic;
 }
 
 @media (min-width: 760px) {
@@ -123,7 +122,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(16, 18, 19);
-    padding: 0 3rem;
+    padding: 0 1.5rem 0 3rem;
   }
   nav {
     padding: 0.5rem 0 0;
@@ -133,9 +132,9 @@ footer {
     display: flex;
     flex-direction: row;
   }
-  nav > ul > li {
+  /* nav > ul > li {
     padding: 0 0 0 3rem;
-  }
+  } */
   li > a:hover {
     color: grey;
   }
@@ -155,7 +154,7 @@ footer {
 }
 
 /* Menu page styling */
-main {
+#menu {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -175,7 +174,6 @@ img {
   padding: 0.5rem;
 }
 h3 {
-  font-family: var(--title-font);
   letter-spacing: 0.08em;
   color: red;
   border-bottom: 2px solid white;

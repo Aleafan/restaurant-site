@@ -41,7 +41,7 @@ const drinks = {
     prices: [17, 20, 21, 19, 20, 50]
 }
 
-export const loadMenu = () => {
+export const createMenu = () => {
     const main = document.createElement('main');
     main.setAttribute('id', 'menu');
 
@@ -81,9 +81,5 @@ export const loadMenu = () => {
         main.appendChild(section);
     });
 
-    // const mainOld = document.querySelector('main');
-    const content = document.getElementById('content');
-    const footer = document.querySelector('footer');
-    // content.removeChild(mainOld);
-    content.insertBefore(main, footer);
+    return main;
 }
