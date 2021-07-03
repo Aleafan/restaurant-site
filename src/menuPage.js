@@ -43,7 +43,7 @@ const drinks = {
 
 export const createMenu = () => {
     const main = document.createElement('main');
-    main.setAttribute('id', 'menu');
+    main.classList.add('tab');
 
     const h2 = document.createElement('h2');
     h2.textContent = 'MENU';

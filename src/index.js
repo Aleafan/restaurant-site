@@ -4,14 +4,14 @@ import { createHeader } from './header.js';
 import { createFooter } from './footer.js';
 import { createMenu } from './menuPage.js';
 
-loadContent(createHeader());
-loadContent(createFooter());
-loadTab(createHomepage());
+// loadContent(createHeader());
+// loadContent(createFooter());
+// loadTab(createHomepage());
 
 setCssVars();
 
-const homeTab = document.getElementById('home');
-homeTab.addEventListener('click', () => loadTab(createHomepage()));
+// const homeTab = document.getElementById('home');
+// homeTab.addEventListener('click', () => loadTab(createHomepage()));
 
-const menuTab = document.getElementById('menu');
-menuTab.addEventListener('click', () => loadTab(createMenu()));
+// const menuTab = document.getElementById('menu');
+// menuTab.addEventListener('click', () => loadTab(createMenu()));
