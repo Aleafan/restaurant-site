@@ -17,13 +17,17 @@ export const createHeader = () => {
   button.addEventListener('click', toggleNav);
 
   const icon = document.createElement('i');
-  icon.classList.add('fas', 'fa-bars', 'fa-2x');
+  icon.classList.add('fas', 'fa-bars', 'fa-2x', 'toggler');
   button.appendChild(icon);
 
   icon.addEventListener('transitionend', toggleIcon);
 
+  const linksWrapper = document.createElement('div');
+  linksWrapper.setAttribute('id', 'links-wrapper');
+  header.appendChild(linksWrapper);
+
   const nav = document.createElement('nav');
-  header.appendChild(nav);
+  linksWrapper.appendChild(nav);
 
   const ul = document.createElement('ul');
   nav.appendChild(ul);
@@ -35,9 +39,29 @@ export const createHeader = () => {
     a.setAttribute('href', '#');
     a.setAttribute('id', link);
     a.textContent = link.toUpperCase();
+
     li.appendChild(a);
     ul.appendChild(li);
+
+    a.addEventListener('click', toggleNav);
   });
+
+  const socialLinks = document.createElement('ul');
+  socialLinks.setAttribute('id', 'social-links');
+  linksWrapper.appendChild(socialLinks);
+
+  const icons = [['fab', 'fa-facebook', 'fa-lg'], ['fab', 'fa-instagram-square', 'fa-lg'], ['fab', 'fa-twitter-square', 'fa-lg']];
+  icons.forEach(icon => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.setAttribute('href', '#');
+    li.appendChild(a);
+    const i = document.createElement('i');
+    icon.forEach(className => i.classList.add(className));
+    a.appendChild(i);
+
+    socialLinks.appendChild(li);
+  })
 
   return header;
 }
@@ -46,9 +70,9 @@ let navMenuShow = false;
 
 function toggleNav() {
     navMenuShow = !navMenuShow;
-    this.querySelector('i').classList.add('scale-btn');
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('show-nav');
+    document.querySelector('.toggler').classList.add('scale-btn');
+    const linksWrapper = document.getElementById('links-wrapper');
+    linksWrapper.classList.toggle('show-nav');
 }
 
 function toggleIcon() {

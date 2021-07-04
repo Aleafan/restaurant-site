@@ -22,6 +22,10 @@ body {
 }
 main {
   flex-grow: 1;
+  transition: 0.5s ease-in;
+}
+.opacity {
+  opacity: 0;
 }
 .background {
   background-image: url("./trattoria_1920-1280.jpg");
@@ -34,6 +38,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   font-weight: bold;
@@ -55,36 +60,41 @@ header h1 {
   margin: 0;  
 }
 #nav-toggler {
+  display: block;
   background: rgb(16, 18, 19);
   color: white;
   border: rgb(16, 18, 19);
   cursor: pointer;
 }
 #nav-toggler i {
-  transition: transform 0.3s cubic-bezier(0.5, 0.3, 0.75, 0.5);
+  transition: 0.3s cubic-bezier(0.5, 0.3, 0.75, 0.5);
 }
 .scale-btn {
   transform: scaleY(0);
 }
 .fa-times {
-  padding: 0 3px;
+  padding: 0 1px 0 4px;
 }
-nav {
+#links-wrapper {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(16, 18, 19);
-  transition: 0.5s cubic-bezier(0.5, 0.3, 0.75, 0.5);
+  transition: 0.4s cubic-bezier(0.5, 0.3, 0.75, 0.5);
   z-index: 2;
   position: relative;
   padding: 1.5rem 0;
-  transform: translateY(-200px);
+  transform: translateY(-300px);
 }
-nav > ul {
-  display: flex;
-  flex-direction: column;
+ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
-li > a {
+nav>ul {
+  display: flex;
+  flex-direction: column;
+}
+nav li a {
   display: block;
   background-color: transparent;
   text-decoration: none;
@@ -93,8 +103,23 @@ li > a {
   padding: 0.7rem 1.5rem;
   cursor: pointer;
 }
+#social-links {
+  margin: 1rem 0 0.7rem;
+}
+#social-links li {
+  display: inline;
+}
+#social-links a {
+  display: inline;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+.fa-lg {
+  vertical-align: baseline;
+}
 .show-nav {
-  transform: translateY(0);
+  transform: translateY(0)!important;
 }
 #vh-wrapper {
   height: 100vh;
@@ -134,17 +159,20 @@ footer {
     background-color: rgb(16, 18, 19);
     padding: 0 1.5rem 0 3rem;
   }
-  nav {
+  #links-wrapper {
+    flex-direction: row;
+    align-items: center;
     padding: 0.5rem 0 0;
     transform: translateY(0);
+    opacity: 1;
   }
   nav > ul {
     display: flex;
     flex-direction: row;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   li > a:hover {
-    color: grey;
+    color: grey!important;
   }
   #nav-toggler {
     display: none;
@@ -204,7 +232,7 @@ h3 {
   padding-left: 0.5rem;
 }
 .menu-item p:last-child {
-  padding-right: 0.5rem;
+  padding: 0 0.5rem;
   border-bottom: none;
 }
 
@@ -237,6 +265,7 @@ button#reservation {
   display: flex;
   flex-direction: column;
 }
+
 @media (min-width: 760px) {
   #contact {
     display: flex;

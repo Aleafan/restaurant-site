@@ -4,6 +4,7 @@ const loadContent = (element) => {
 }
 
 const loadTab = (element) => {
+  element.classList.add('opacity');
   const content = document.getElementById('content');
   const footer = document.querySelector('footer');
   const previousTab = document.querySelector('main');
@@ -11,6 +12,8 @@ const loadTab = (element) => {
     content.removeChild(previousTab);
   }
   content.insertBefore(element, footer);
+
+  setTimeout(() => element.classList.remove('opacity'), 20);
 }
 
 const setCssVars = () => {
