@@ -28,7 +28,7 @@ main {
   opacity: 0;
 }
 .background {
-  background-image: url("./trattoria_1920-1280.jpg");
+  background-image: url("./trattoria_1280-853.jpg");
   background-size: cover;
   background-position: center;
   height: calc(var(--vh, 1vh) * 100);
@@ -150,7 +150,11 @@ footer {
   background-color:rgb(24, 26, 28);
   font-style: italic;
 }
-
+@media (min-width: 1280px) {
+  .background {
+    background-image: url("./trattoria_1920-1280.jpg");
+  }
+}
 @media (min-width: 760px) {
   header {
     flex-direction: row;
