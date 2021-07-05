@@ -1,3 +1,5 @@
+import menuImage from './assets/images/food-w800.jpg';
+
 const antipasti = {
     name: 'ANTIPASTI',
     items: [
@@ -50,7 +52,7 @@ export const createMenu = () => {
     main.appendChild(h2);
 
     const image = document.createElement('img');
-    image.setAttribute('src', '../src/food-w800.jpg');
+    image.setAttribute('src', menuImage);
     image.setAttribute('alt', 'Food and wine served in a restaurant');
     main.appendChild(image);
 

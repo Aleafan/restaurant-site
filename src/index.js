@@ -1,3 +1,6 @@
+import './styles/normalize.css';
+import './styles/styles.css';
+
 import { loadContent, loadTab, setCssVars } from './helpers.js';
 import { createHomepage } from './homepage.js';
 import { createHeader } from './header.js';

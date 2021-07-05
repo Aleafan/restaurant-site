@@ -1,5 +1,11 @@
-:root {
-  --title-font: 'Otomanopee One', sans-serif;
+/* General style rules */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('woff2');
+}
+@font-face {
+  font-family: 'Otomanopee One';
+  src: url('../assets/fonts/OtomanopeeOne-Regular.ttf') format('woff2');
 }
 * {
   box-sizing: border-box;
@@ -24,11 +30,13 @@ main {
   flex-grow: 1;
   transition: 0.5s ease-in;
 }
+
+/* Homepage styling */
 .opacity {
   opacity: 0;
 }
 .background {
-  background-image: url("./trattoria_1280-853.jpg");
+  background-image: url("../assets/images/trattoria_1280-853.jpg");
   background-size: cover;
   background-position: center;
   height: calc(var(--vh, 1vh) * 100);
@@ -55,7 +63,7 @@ header {
   background-color: rgb(16, 18, 19);
 }
 header h1 {
-  font-family: var(--title-font);
+  font-family: 'Otomanopee One', sans-serif;
   font-style: italic;
   margin: 0;  
 }
@@ -150,9 +158,10 @@ footer {
   background-color:rgb(24, 26, 28);
   font-style: italic;
 }
+
 @media (min-width: 1280px) {
   .background {
-    background-image: url("./trattoria_1920-1280.jpg");
+    background-image: url("../assets/images/trattoria_1920-1280.jpg");
   }
 }
 @media (min-width: 760px) {
