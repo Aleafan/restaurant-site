@@ -185,7 +185,7 @@ footer {
     font-size: 1.1rem;
   }
   li > a:hover {
-    color: grey!important;
+    color: rgb(228, 105, 4)!important;
   }
   #nav-toggler {
     display: none;
