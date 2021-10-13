@@ -1,5 +1,7 @@
 # Restaurant site
 
+![restaurant-site](https://user-images.githubusercontent.com/76619902/133417668-68763ef0-a21e-4c93-a320-09d035574cd5.png)
+
 This is the site of picturesque imaginary restaurant in Florence with 3 pages - Home, Menu and Contact.
 
 This site is a training project for The Odin Project course. 
