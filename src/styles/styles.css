@@ -1,12 +1,4 @@
 /* General style rules */
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('woff2');
-}
-@font-face {
-  font-family: 'Otomanopee One';
-  src: url('../assets/fonts/OtomanopeeOne-Regular.ttf') format('woff2');
-}
 * {
   box-sizing: border-box;
 }
